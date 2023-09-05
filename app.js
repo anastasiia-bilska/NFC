@@ -52,5 +52,7 @@ readButton.addEventListener('click', async () => {
     } catch (error) {
       alert(error);
     }
+  } else {
+    alert('Web NFC is not supported.');
   }
 });
