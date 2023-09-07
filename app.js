@@ -60,13 +60,14 @@ readButton.addEventListener('click', async () => {
     alert('Web NFC is not supported.');
   }
 });
+
 writeButton.addEventListener('click', async () => {
   if ('NDEFReader' in window) {
     const ndef = new NDEFReader();
     try {
       await ndef.write('Аптека №911');
       alert('write success');
-      await readTag();
+      // await readTag();
     } catch (e) {
       console.log(e);
       alert('Write failed');
