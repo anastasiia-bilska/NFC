@@ -66,7 +66,8 @@ writeButton.addEventListener('click', async () => {
       await ndef.write('Аптека №911');
       alert('write success');
       await readTag();
-    } catch {
+    } catch(e) {
+      console.log(e)
       alert('Write failed');
     }
     } else {
