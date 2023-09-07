@@ -65,7 +65,7 @@ writeButton.addEventListener('click', async () => {
   if ('NDEFReader' in window) {
     const ndef = new NDEFReader();
     try {
-      await ndef.write('Аптека №911');
+      await ndef.write('Аптека!!!');
       alert('write success');
       // await readTag();
     } catch (e) {
