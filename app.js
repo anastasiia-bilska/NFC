@@ -71,7 +71,7 @@ writeButton.addEventListener('click', async () => {
   if ('NDEFReader' in window) {
     const ndef = new NDEFReader();
     try {
-      await ndef.write(text.value, { timeout: 3_000 });
+      await ndef.write(input.value, { timeout: 1_000 });
       alert('write success');
     } catch (e) {
       console.log(e);
