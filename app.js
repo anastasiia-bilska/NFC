@@ -65,9 +65,8 @@ writeButton.addEventListener('click', async () => {
   if ('NDEFReader' in window) {
     const ndef = new NDEFReader();
     try {
-      await ndef.write('Аптека!!!');
+      await ndef.write('Аптека!!!', { timeout: 3_000 });
       alert('write success');
-      // await readTag();
     } catch (e) {
       console.log(e);
       alert('Write failed');
