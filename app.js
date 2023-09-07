@@ -40,6 +40,12 @@ const readButton = document.querySelector('#read');
 
 const writeButton = document.querySelector('#write');
 
+const input = document.querySelector('#text');
+
+input.addEventListener('input', () => {
+  console.log(input.value);
+});
+
 readButton.addEventListener('click', async () => {
   if ('NDEFReader' in window) {
     const ndef = new NDEFReader();
@@ -65,7 +71,7 @@ writeButton.addEventListener('click', async () => {
   if ('NDEFReader' in window) {
     const ndef = new NDEFReader();
     try {
-      await ndef.write('Аптека!!!', { timeout: 3_000 });
+      await ndef.write(text.value, { timeout: 3_000 });
       alert('write success');
     } catch (e) {
       console.log(e);
