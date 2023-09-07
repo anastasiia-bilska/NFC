@@ -38,7 +38,7 @@ alert(window.NDEFReader);
 
 const readButton = document.querySelector('#read');
 
-const writeButton = document.querySelector('write');
+const writeButton = document.querySelector('#write');
 
 readButton.addEventListener('click', async () => {
   if ('NDEFReader' in window) {
